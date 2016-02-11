@@ -1,0 +1,100 @@
+body,
+html {
+  background-color: black;
+  color: white;
+  font-family: "Apercu Regular", Calibri, sans-serif;
+  font-size-adjust: 0.508;
+  font-weight: normal;
+  font-style: normal; }
+  @media screen and (min-width: 640px) {
+    body,
+    html {
+      font-size: 20px; } }
+  @media screen and (max-width: 640px) {
+    body,
+    html {
+      font-size: 16px; } }
+
+.sticky-title-container {
+  width: 60px;
+  overflow: hidden; }
+
+@media screen and (min-width: 640px) {
+  .slide-container {
+    padding-left: 60px; } }
+#kickstarter {
+  background-color: #2bde73; }
+
+#misc {
+  background-color: blue; }
+
+#lodge {
+  background-image: url("../images/iphone_leather_orange.jpg"); }
+
+#dollar-a-day {
+  background-color: #4fbb7e;
+  background-image: url("../images/dollar-a-day-bg.jpg");
+  background-size: 100% auto; }
+
+.button {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 0.8em;
+  color: white; }
+
+.button,
+a {
+  position: relative; }
+  .button::after,
+  a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    -webkit-transform: translate(0, 50%);
+    -moz-transform: translate(0, 50%);
+    -ms-transform: translate(0, 50%);
+    -o-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+    -webkit-transition: all 500ms cubic-bezier(1, 0, 0, 1);
+    -moz-transition: all 500ms cubic-bezier(1, 0, 0, 1);
+    -ms-transition: all 500ms cubic-bezier(1, 0, 0, 1);
+    -o-transition: all 500ms cubic-bezier(1, 0, 0, 1);
+    transition: all 500ms cubic-bezier(1, 0, 0, 1); }
+  .button:hover::after,
+  a:hover::after {
+    width: 110%; }
+  .button:hover,
+  a:hover {
+    text-decoration: none; }
+  .button.black::after,
+  a.black::after {
+    background-color: black; }
+
+.light {
+  font-weight: 200; }
+
+.nowrap {
+  white-space: nowrap; }
+
+.sticky-title {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  width: 200px;
+  margin-top: -180px; }
+  .sticky-title .title {
+    display: block;
+    height: 60px;
+    line-height: 60px; }
+  .sticky-title.sticky-title-left {
+    -webkit-transform: scale(1) rotate(270deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -moz-transform: scale(1) rotate(270deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -ms-transform: scale(1) rotate(270deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -o-transform: scale(1) rotate(270deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    transform: scale(1) rotate(270deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg); }
