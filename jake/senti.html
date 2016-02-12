@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <title>Jake.ly &ndash; Designer &amp; Developer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#34495e">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Senti Notifications by Jake Blakeley &mdash; emotionally aware notification app">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        //go back a page and reopen work/journal entry
+        var url     = window.location.href,
+            pageUrl = url.split("/").pop();
+        window.location.replace("/?" + pageUrl);
+    </script>
+
+    <nav>
+        <div class="navContainer">
+            <div class="logo">
+                Jake.ly
+            </div>
+            <ul>
+                <a href="index.html">
+                    <li class="link active">Back to Portfolio</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="article">
+        <div class="descriptionTitle">
+            <h1>Senti Notifications</h1>
+            <h4>Emotionally aware notification app</h4>
+            <hr>
+        </div>
+        <div class="descriptionBody">
+            <p>The concept for this project arose when I began thinking about my previous internship at a social media agency and how it was common practice to analyze the messages of tweets to gauge the sentiment as either a negative or positive. At the same time I was also exploring the idea of how mobile notification are quite devoid of context. For example, you receive the same vibration for a message that simply says “hello” as you do with a message about a medical or family emergency.</p>
+
+            <p class="descriptionLink">
+                <a href="http://johnjacob.ca/emo/" target="_blank">Link to interactive prototype <span>&#8594;</span></a>
+            </p>
+
+            <p>From these ideas, I came up with the concept of an Android app that analyzes the text from messaging app notifications and gives different feedback based on the negative or positive nature of the message. This feedback occurs through a unique vibration/haptics, ring tone, and different color of unlock screen depending on if its positive or negative. You can learn more from the product website and the prototype below.</p>
+
+            <p class="descriptionLink">
+                <a href="http://johnjacob.ca/senti/" target="_blank">Link to product page <span>&#8594;</span></a>
+            </p>
+
+            <p>The main concept of this project was more of a provocation. Although I made sure that this app could be created with current technology, I more so wanted to use it as a way to start a conversation about how our mobile devices could be more aware of the context around them. A step towards making them feel more human.</p>
+
+            <h2 class="center">Onboarding Flow</h2>
+            <div class="imageContainer">
+                <img src="img/workImages/sentiFlow/senti1.png" alt="" class="thirdWidth">
+                <img src="img/workImages/sentiFlow/senti2.png" alt="" class="thirdWidth">
+                <img src="img/workImages/sentiFlow/senti3.png" alt="" class="thirdWidth">
+                <img src="img/workImages/sentiFlow/senti4.png" alt="" class="thirdWidth outline">
+                <img src="img/workImages/sentiFlow/senti5.png" alt="" class="thirdWidth outline">
+                <img src="img/workImages/sentiFlow/senti7.png" alt="" class="thirdWidth">
+            </div>
+
+            <h2 class="center">Notification Examples</h2>
+            <div class="imageContainer">
+                <img src="img/workImages/sentiFlow/senti8.png" alt="" class="thirdWidth">
+                <img src="img/workImages/sentiFlow/senti9.png" alt="" class="thirdWidth">
+                <img src="img/workImages/sentiFlow/senti12.png" alt="" class="thirdWidth">
+            </div>
+
+            <h2 class="center">Marketing Website</h2>
+            <img src="img/workImages/senti1.png" alt="" class="fullwidth outline">
+            <img src="img/workImages/senti2.png" alt="" class="fullwidth outline">
+
+            <div class="backToWorkContainer">
+                <div class="backToWorkIcon"></div>
+                <p class="backToWorkText">Back to Work</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37439497-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".descriptionTitle, .descriptionBody").addClass("fadeIn");
+    });
+    </script>
+</body>
+</html>

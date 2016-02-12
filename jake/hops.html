@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <title>Jake.ly &ndash; Designer &amp; Developer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#34495e">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Meno by Jake Blakeley &mdash; A personal DJ in your pocket">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        //go back a page and reopen work/journal entry
+        var url     = window.location.href,
+            pageUrl = url.split("/").pop();
+        window.location.replace("/?" + pageUrl);
+    </script>
+
+    <nav>
+        <div class="navContainer">
+            <div class="logo">
+                Jake.ly
+            </div>
+            <ul>
+                <a href="index.html">
+                    <li class="link active">Back to Portfolio</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="article">
+        <div class="descriptionTitle">
+            <h1>Hops</h1>
+            <h4>Your guide to craft beer</h4>
+            <hr>
+        </div>
+        <div class="descriptionBody">
+            <p>Hops is a Android app concept centered around helping you navigate the dizzying Toronto craft beer scene. We start by determining what's nearby and what you may like, then give you just enough information to choose your next beer. If you can’t decide yet, you can save a few to your list and pick from your choices later &mdash; much like an online shopping cart. To keep the app interesting throughout the year we also include visual indicators for seasonal beers, as well as beers that are new to the market.</p>
+
+            <p>To facilitate sharing, as well as a way to organically grow the userbase, I came up with the unique interaction of mimicking “cheering” your phones together. You simply tap your phones together like you’re cheersing a couple of beers, and you can find something that matches both of your tastes &mdash; incase you want to share a pitcher and save a few bucks.</p>
+
+            <p class="descriptionLink">
+                <a href="http://johnjacob.ca/beer/v5/" target="_blank">Link to interactive prototype <span>&#8594;</span></a>
+            </p>
+
+            <img src="img/workImages/hops1.gif" alt="Hops app walkthrough gif" class="fullwidth">
+            <img src="img/workImages/hops2.jpg" alt="Hops app cheers to share" class="fullwidth">
+
+            <p class="credits">Credits:<br>
+            Amy Chiu <br>
+            Nathan Grimberg <br>
+            Perrine Brouillet</p>
+
+            <div class="backToWorkContainer">
+                <div class="backToWorkIcon"></div>
+                <p class="backToWorkText">Back to Work</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37439497-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".descriptionTitle, .descriptionBody").addClass("fadeIn");
+    });
+    </script>
+</body>
+</html>
