@@ -7,4 +7,21 @@
     margin-left: 110px;	
 }
 
-@import url("http://mastertercume.com/index.css");
+
+footer {
+    position: relative;
+}
+
+.cd-nav-trigger {
+	right: 6px;
+	top: 6px;
+}
+
+.cd-logo {
+	margin-left: 24px;
+	margin-top: 10px;
+}
+
+.itao-for-publishers-img {
+	display: none;
+}
