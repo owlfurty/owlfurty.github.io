@@ -47,4 +47,21 @@ footer {
 		padding: 50px 40px;
 	}
 
+	.space-margin-bottom-1 {
+		margin-top: 1.8rem;
+	}
+
+	.aito-for-publishers-img {
+		width: 210px;
+		height: auto;
+	}
+
+	.aito-desktop {
+		top: -510px;
+		right: -285px;
+	}
+	.full-button {
+		padding: 0 24px;
+	}
+
 }
