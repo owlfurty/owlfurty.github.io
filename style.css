@@ -36,5 +36,15 @@ footer {
 	    margin-left: 110px;
 	    max-width: 210px;
 	    margin-top: 50px;
+	    margin-bottom: 50px;
 	}
+
+	#products .mycontainer {
+		width: 240px;
+	}
+
+	.aito-for-publishers {
+		padding: 50px 40px;
+	}
+
 }
