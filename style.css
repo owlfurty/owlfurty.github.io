@@ -14,6 +14,9 @@ footer {
 
 
 @media only screen and (max-width: 769px) {
+	h5 {
+		color: rgba(255,255,255,.6)
+	}
 	.cd-nav-trigger {
 		right: 6px;
 		top: 6px;
