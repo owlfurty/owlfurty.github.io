@@ -12,16 +12,29 @@ footer {
     position: relative;
 }
 
-.cd-nav-trigger {
-	right: 6px;
-	top: 6px;
-}
 
-.cd-logo {
-	margin-left: 24px;
-	margin-top: 10px;
-}
+@media only screen and (max-width: 769px) {
+	.cd-nav-trigger {
+		right: 6px;
+		top: 6px;
+	}
 
-.itao-for-publishers-img {
-	display: none;
+	.cd-logo {
+		margin-left: 24px;
+		margin-top: 10px;
+	}
+
+	.itao-for-publishers-img {
+	    width: 210px;
+	    height: auto;
+	}
+	.hold-itao {
+	    background: linear-gradient(135deg, #07223D, #092547, #08203C, #07223D);
+	    overflow: hidden; }
+
+	.hold-itao .content-container {
+	    margin-left: 110px;
+	    max-width: 210px;
+	    margin-top: 50px;
+	}
 }
