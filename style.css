@@ -90,7 +90,9 @@ footer {
 		height: 70px;
 	}
 
-	.itao-image-mobile {
+	.itao-image-mobile,
+	.white-lines,
+	.mycontainer.container {
 		display: none;
 	}
 
