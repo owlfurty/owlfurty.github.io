@@ -67,4 +67,8 @@ footer {
 		padding: 0 24px;
 	}
 
+	.about-the-team {
+		display: none;
+	}
+
 }
