@@ -104,7 +104,8 @@ footer {
 		color: rgba(0,0,0,.7);
 	}
 
-	.itao-image-block h2, .itao-image-block h4, .itao-image-block .that-is-it {
+	.itao-image-block h2, .itao-image-block h4, .itao-image-block .that-is-it,
+	.aito-image-block h2, .aito-image-block h4, .aito-image-block .that-is-it {
 		width: 70%;
 	}
 	.footer-logo {
