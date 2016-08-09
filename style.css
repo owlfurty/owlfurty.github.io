@@ -70,6 +70,9 @@ footer {
 	    background-image: url("../../images/engage-more-logo.png");
 	}
 
+	.black-header {
+		background: #0F75BF;
+	}
 	.footer-logo {
 	    top: 60px;
 	}
