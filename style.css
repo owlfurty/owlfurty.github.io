@@ -69,7 +69,9 @@ footer {
 	    background-repeat: no-repeat;
 	    background-image: url("../../images/engage-more-logo.png");
 	}
-
+	.aboutus-logo {
+		width: 70%;
+	}
 	.black-header {
 		background: #0F75BF;
 	}
