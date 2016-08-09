@@ -40,9 +40,9 @@ footer {
 	    overflow: hidden; }
 
 	.hold-itao .content-container {
-	    margin-left: 80px;
+	    margin-left: 90px;
 	    width: auto;
-	    max-width: 68%;
+	    max-width: 65%;
 	    margin-top: 50px;
 	    margin-bottom: 50px;
 	}
@@ -78,6 +78,10 @@ footer {
 
 	.mobileholder {
 		position: relative;
+	}
+
+	.need-help {
+		display: none;
 	}
 
 	.itao-mobile {
