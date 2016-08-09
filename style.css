@@ -89,6 +89,14 @@ footer {
 		background: #0F75BF;
 		height: 70px;
 	}
+
+	.itao-image-mobile {
+		display: none;
+	}
+
+	.itao-image-block h2, .itao-image-block h4, .itao-image-block .that-is-it {
+		width: 80%;
+	}
 	.footer-logo {
 	    top: 60px;
 	}
@@ -96,7 +104,14 @@ footer {
 		width: 210px;
 		height: auto;
 	}
-
+	.itao-logo {
+	    width: 408px;
+	    height: 105px;
+	    margin: 0 auto;
+	    background-size: 50% auto;
+	    background-position: 31% 0%;
+	    background-repeat: no-repeat;
+	}
 	.aito-desktop {
 		top: -440px;
 		right: -285px;
