@@ -129,6 +129,10 @@ footer {
 		padding: 0;
 	}
 
+	.aito-about-block .container.smaller {
+		display: none;
+	}
+
 	.aito-image-cards {
 	    position: relative;
 	    left: -82%;
