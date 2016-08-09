@@ -59,16 +59,7 @@ footer {
 		margin-top: 1.8rem;
 	}
 
-	.engage-more-logo {
-	    width: 100%;
-	    height: 33px;
-	    padding-bottom: 0;
-	    margin: 0 auto;
-	    background-size: 100%;
-	    background-position: 0% 0%;
-	    background-repeat: no-repeat;
-	    background-image: url("../../images/engage-more-logo.png");
-	}
+	
 	header.black-header.nav-is-visible {
 	    transform: translateX(0);
 	}
