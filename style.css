@@ -124,6 +124,9 @@ footer {
 	    font-size: 19px
 
 	}
+	.space-top-6 {
+		margin-top: 0;
+	}
 
 	.aito-image-cards {
 	    position: relative;
@@ -132,7 +135,9 @@ footer {
 	    margin-bottom: 0;
 	    height: 460px;
 	}
-
+	.aito-image-desktop {
+		display: none;
+	}
 	.aito-image-block {
     background-size: 300%; }
 	.aito-for-publishers-img {
