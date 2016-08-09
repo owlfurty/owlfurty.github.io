@@ -80,6 +80,10 @@ footer {
 		background: #0F75BF;
 		height: 70px;
 	}
+	.engage-more-logo {
+		width: 100%;
+		background-size: 93% auto;
+	}
 
 	.itao-image-mobile,
 	.white-lines,
