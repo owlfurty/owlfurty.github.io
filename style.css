@@ -128,11 +128,11 @@ footer {
 		height: auto;
 	}
 	.itao-logo {
-	    width: 408px;
-	    height: 105px;
+	    width: 180px;
+	    height: auto;
 	    margin: 0 auto;
-	    background-size: 50% auto;
-	    background-position: 31% 0%;
+	    background-size: inherit;
+	    background-position: inherit;
 	    background-repeat: no-repeat;
 	}
 	.aito-desktop {
