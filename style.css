@@ -80,6 +80,9 @@ footer {
 		background: #0F75BF;
 		height: 70px;
 	}
+	.cd-nav-trigger {
+		display: none;
+	}
 	.engage-more-logo {
 		width: 100%;
 		background-size: 93% auto;
