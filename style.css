@@ -70,5 +70,12 @@ footer {
 	.about-the-team {
 		display: none;
 	}
+	.itao-mobile {
+    z-index: 100;
+    left: 0;
+    top: 1em;
+    min-height: 800px;
+    position: absolute;
+}
 
 }
