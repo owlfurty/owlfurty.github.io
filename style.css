@@ -108,7 +108,20 @@ footer {
 		width: 80%;
 	}
 	.footer-logo {
-	    top: 60px;
+	    top: 120px;
+	}
+	footer {
+		min-height: 14em;;
+	}
+	footer:after {
+	    display: block;
+	    content:"Kattenburgerstraat 5 Amsterdam, 1018JA Netherlands";
+	    color: rgba(0,0,0,.6);
+	    text-align: center;
+	    width: 60%;
+	    margin: 2em auto;
+	    font-size: 19px
+
 	}
 	.aito-for-publishers-img {
 		width: 210px;
