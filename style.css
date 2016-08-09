@@ -70,12 +70,20 @@ footer {
 	.about-the-team {
 		display: none;
 	}
+
+	.mobileholder {
+		position: relative;
+	}
+
 	.itao-mobile {
-    z-index: 100;
-    left: 0;
-    top: 1em;
-    min-height: 800px;
-    position: absolute;
-}
+	    z-index: 100;
+	    background: url(http://www.nineconnections.com/images/mobile.png) no-repeat -330px 50px;
+	    left: 0;
+	    top: 1em;
+	    min-height: 800px;
+	    position: absolute;
+	    width: 260px;
+	    background-size: 380px;
+	}
 
 }
