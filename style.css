@@ -69,6 +69,12 @@ footer {
 	    background-repeat: no-repeat;
 	    background-image: url("../../images/engage-more-logo.png");
 	}
+	header.black-header.nav-is-visible {
+	    transform: translateX(0);
+	}
+	header.black-header .cd-nav-trigger {
+		display: none;
+	}
 	.employee.columns {
 		width: 100%;
 	}
@@ -81,6 +87,7 @@ footer {
 	}
 	.black-header {
 		background: #0F75BF;
+		height: 70px;
 	}
 	.footer-logo {
 	    top: 60px;
