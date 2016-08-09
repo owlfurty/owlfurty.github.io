@@ -125,8 +125,11 @@ footer {
 
 	}
 
+	.container.smaller.space-top-6 {
+		padding-top: 0;
+	}
 	.aito-about-block .container.smaller {
-		display: none;
+		/*display: none;*/
 	}
 
 	.aito-image-cards {
