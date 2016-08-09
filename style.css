@@ -76,6 +76,9 @@ footer {
 		width: 70%;
 		height: 32px;
 	}
+	.full-button{ 
+		z-index: 99999;
+	 }
 	.black-header {
 		background: #0F75BF;
 		height: 70px;
