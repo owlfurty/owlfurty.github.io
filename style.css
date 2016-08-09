@@ -77,11 +77,14 @@ footer {
 		height: 32px;
 	}
 	.full-button{ 
-		z-index: 99999;
+		z-index: 999;
 	 }
 	.black-header {
 		background: #0F75BF;
 		height: 70px;
+	}
+	.itao-logo {
+		background-position: 41% 0%;
 	}
 	.cd-nav-trigger {
 		display: none;
