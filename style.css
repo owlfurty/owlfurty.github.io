@@ -38,6 +38,9 @@ footer {
 	    width: 210px;
 	    height: auto;
 	}
+	.about-the-team {
+		padding: 0;
+	}
 	.hold-itao {
 	    background: linear-gradient(135deg, #07223D, #092547, #08203C, #07223D);
 	    overflow: hidden; }
@@ -98,11 +101,15 @@ footer {
 	}
 
 	.itao-image-mobile,
-	.white-lines,
-	.mycontainer.container {
+	.white-lines{
 		display: none;
 	}
-
+	.member-image {
+		background-size: contain;
+		background-repeat: no-repeat;
+		height: 290px;
+		background-position: center;
+	}
 	.itao-about-block h5 {
 		color: rgba(0,0,0,.7);
 	}
@@ -167,11 +174,29 @@ footer {
 	.full-button {
 		padding: 0 24px;
 	}
-
-	.about-the-team {
-		display: none;
+	.team-member {
+		width: 98%;
+		margin: 2.4rem auto;
+		background-color: #ECEEF1;
+		text-align: center;
+		border-radius: 3px;
+		padding: 0 1em;
+	}
+	.member-about {
+		background: #ECEEF1;
+		padding: 16px;
 	}
 
+	.member-about a {
+		width: 40px;
+		display: inline-block;
+		color: #a1a1a1;
+	}
+
+	.member-about img {
+		width: 100%;
+	}
+	
 	.mobileholder {
 		position: relative;
 	}
