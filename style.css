@@ -39,7 +39,7 @@ footer {
 	    height: auto;
 	}
 	.about-the-team {
-		padding: 0;
+		padding: 60px 0;
 	}
 	.hold-itao {
 	    background: linear-gradient(135deg, #07223D, #092547, #08203C, #07223D);
@@ -190,7 +190,6 @@ footer {
 	.member-about a {
 		width: 40px;
 		display: inline-block;
-		color: #a1a1a1;
 	}
 
 	.member-about img {
