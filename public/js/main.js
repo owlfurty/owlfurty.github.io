@@ -118,7 +118,7 @@ var init = function() {
 	scene = new THREE.Scene();
 
 	camera = new THREE.PerspectiveCamera(50, ww / wh, 0.01, 10100);
-	camera.position.set(-22200, 0, 450);
+	camera.position.set(-2200, 0, 450);
 	camera.lookAt(centerVector);
 	scene.add(camera);
 
@@ -158,7 +158,7 @@ var render = function(a) {
 	}
 
 	particles.geometry.verticesNeedUpdate = true;
-	camera.position.x = Math.sin(a / 3000) * 20;
+	camera.position.x = Math.sin(a / 4200) * 80;
 	camera.lookAt(centerVector);
 
 	renderer.render(scene, camera);
