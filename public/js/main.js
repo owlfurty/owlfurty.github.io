@@ -158,7 +158,7 @@ var render = function(a) {
 	}
 
 	particles.geometry.verticesNeedUpdate = true;
-	camera.position.x = Math.sin(a / 4200) * 80;
+	camera.position.x = Math.sin(a / 4200) * 60;
 	camera.lookAt(centerVector);
 
 	renderer.render(scene, camera);

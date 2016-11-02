@@ -1,0 +1,51 @@
+// Fonts 
+@mixin font-face($style-name, $file, $family, $category:"") 
+    $filepath: "fonts/" + $family + "/" + $file;
+    @font-face 
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+    
+    %#{$style-name} 
+        font: 
+            @if $category != "" 
+                family: "#{$style-name}", #{$category};
+            
+            @else
+                family: "#{$style-name}";
+                weight: normal;
+
+// Grid 
+@function grid-column-width($n) 
+  @return $column-width * $n - ($column-margin*($total-columns - $n)/$total-columns)
+
+@function grid-offset-length($n) 
+  @return grid-column-width($n) + $column-margin
+
+
+// center vertically and/or horizontally an absolute positioned element
+
+@mixin center($xy:xy)
+  @if $xy == xy
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include transform(translateX(-50%) translateY(-50%));
+  
+  @else if $xy == x
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  
+  @else if $xy == y
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
+
+
+// antialiasing mode font rendering
+
+@mixin font-smoothing
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;

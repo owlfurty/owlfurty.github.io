@@ -1,0 +1,1025 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeLegibility
+
+html
+  font-size: 62.5%
+
+
+body
+  font-size: 1.5rem
+  line-height: 1.6
+  font-weight: 400
+  font-family: $font-regular
+  color: $dark
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  overflow-x: hidden
+
+a 
+  text-decoration: none
+  cursor: pointer
+
+.container
+  @extend %row
+  .bar 
+    @extend %col-flex
+
+canvas 
+  display: block
+  position: absolute
+  height: 100%
+  z-index: -999
+
+header
+  position: fixed
+  z-index: 3
+  height: 150px
+  width: 100%
+  top: 0
+  left: 0
+  background: rgba(white, 0)
+  @include font-smoothing
+  &.sticky
+    @include transition(all .3s)
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08)
+    background: white
+    height: 60px
+    .pt-main-nav
+      @include transition(all .3s)
+      height: 100%
+      line-height: 60px
+    .pt-logo 
+      @include transition(all .3s)
+      transform: translatey(0)
+      img
+        margin-top: 10px
+        max-width: 60%
+
+  /* Force Hardware Acceleration */
+  @include transform(translateZ(0))
+  @include backface-visibility(hidden)
+
+  @include transition(transform .3s)
+
+  &.nav-is-visible
+    @include transform(translateX(-260px))
+  
+
+  &::before
+    /* never visible - this is used in jQuery to check the current MQ */ 
+    display: none
+    content: 'mobile'
+  
+
+  @include MQ(L)
+    height: 150px
+
+    &.nav-is-visible
+      @include transform(translateX(0))
+    
+
+    &::before
+      content: 'desktop'
+
+.hero 
+  height: 100vh
+  width: 100%
+  display: table
+  text-align: center
+  @extend %vertical-align-middle
+  .title 
+    display: table-cell
+    vertical-align: middle
+    h1
+      font-family: $font-bold
+      font-size: 5rem
+      line-height: 1.2em
+      max-width: 580px
+      margin: auto
+      letter-spacing: -1.25px
+  
+.pt-logo
+  @include transition(all .3s)
+  display: inline-block
+  height: 100%
+  
+  /* remove jump on iOS devices - when we fire the navigation */
+  @include transform(translatey(29px))
+  @include backface-visibility(hidden)
+
+  img
+    @include transition(all .3s)
+    display: block
+    max-width: 100%
+    margin-top: 14px
+  
+
+  @include MQ(L)
+    position: absolute
+    z-index: 2
+    
+.pt-nav-trigger
+  display: block
+  position: absolute
+  right: 0
+  top: 0
+  height: 100%
+  width: 50px
+
+  /* hide text */
+  overflow: hidden
+  white-space: nowrap
+  color: transparent
+
+  span
+    /* hamburger icon created in CSS */
+    position: absolute
+    height: 2px
+    width: 20px
+    top: 50%
+    margin-top: -1px
+    left: 50%
+    margin-left: -10px
+    @include transition(background-color .3s .3s)
+    background-color: $dark
+
+    &::before, &::after
+      /* upper and lower lines of the menu icon */
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: $dark
+      
+      /* Force Hardware Acceleration */
+      @include transform(translateZ(0))
+      @include backface-visibility(hidden)
+      
+      @include transition(transform .3s .3s)
+    
+
+    &::before
+      @include transform(translateY(-6px))
+    
+
+    &::after
+      @include transform(translateY(6px))
+    
+  
+
+  .nav-is-visible & span
+    background-color: rgba(white, 0)
+  
+    &::before
+      @include transform(translateY(0) rotate(-45deg))
+    
+
+    &::after
+      @include transform(translateY(0) rotate(45deg))
+    
+  @include MQ(L)
+    display: none
+  
+.pt-main-nav
+  @include transition(all .3s)
+  position: fixed
+  z-index: 1
+  top: 0
+  right: 0
+  width: 260px
+  height: 100vh
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  visibility: hidden
+  background: white
+
+  a
+    display: block
+    font-size: 1.3rem
+    border-bottom: 1px solid $dark-border
+    color: $dark
+    @include transition(transform .3s, opacity .3s)
+  
+
+  li ul
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    @include transition(transform .3s)
+    @include transform(translateX(260px))
+  
+
+  &.nav-is-visible
+    visibility: visible
+    @include transition(visibility 0s 0s)
+  
+
+  &.moves-out > li > a
+    /* push the navigation items to the left - and lower down opacity - when secondary nav slides in */
+    @include transform(translateX(-100%))
+    opacity: 0
+  
+
+  &.moves-out > li > ul
+    @include transform(translateX(0))
+
+
+  .go-back a
+    padding-left: 2em
+
+    &::before, &::after
+      /* arrow goes on the left side - go back button */
+      left: 20px
+      @include transform-origin(1px 50%)
+     
+  @include MQ(L)
+    position: static
+    visibility: visible
+    width: 100%
+    height: 150px
+    line-height: 150px
+    /* padding left = logo size + logo left position*/
+    background: transparent
+    text-align: right
+
+    li
+      display: inline-block
+      height: 100%
+    
+
+    li a
+      display: inline-block
+      line-height: 1
+      font-size: 1.5rem
+      text-transform: uppercase
+      border-bottom: none
+      font-family: $font-bold
+      margin-left: 1.3em
+      
+      /* Prevent .pt-subnav-trigger flicker is Safari */
+      @include transform(translateZ(0))
+      @include backface-visibility(hidden)
+      
+      @include transition(all .3s)
+    
+
+    li a:not(.pt-subnav-trigger):hover
+      @include backface-visibility(hidden)
+      color: $turquoise
+    
+.pt-main-content::before
+  /* never visible - this is used in jQuery to check the current MQ */ 
+  display: none
+  content: 'mobile'
+
+  @include MQ(L)
+    content: 'desktop'
+
+.pt-main-content
+  position: relative
+  z-index: 2
+  min-height: 100vh
+  @include transition(transform .3s)
+
+  &.nav-is-visible
+    @include transform(translateX(-260px))
+  
+
+  @include MQ(L)
+
+    &.nav-is-visible
+      @include transform(translateX(0))
+
+
+.playbutton 
+  display: block
+  height: 102px
+  width: 102px
+  background: rgba($turquoise, 0)
+  border-radius: 50%
+  margin: 3em auto
+
+.animate-reveal
+  opacity: 0
+  animation: reveal 1400ms cubic-bezier(1, 1, 1, 1) 1 normal forwards
+
+
+.animate-headline
+  @include animation-delay(2800ms)
+
+.animate-play
+  @include animation-delay(3800ms)
+
+@include keyframes(reveal)
+  0%
+    opacity: 0
+    @include transform(translateY(10%))
+  
+  100%
+    opacity: 1
+    @include transform(translateY(1))
+  
+
+@include keyframes(fadeIn) 
+  from 
+    @include transform(scale(0))
+  
+  to 
+    @include transform(scale(1))
+  
+
+
+
+
+// Spin animation
+@keyframes spin
+  to 
+    transform: rotate(360deg)
+
+.stroke-dotted 
+  opacity: 0
+  stroke-dasharray: 1,5
+  stroke-width: 1.2px
+  fill: rgba($turquoise, .01)
+  transform-origin: 50% 50%
+  animation: spin 5s infinite linear
+  transition: opacity 1s ease, stroke-width 1s ease
+
+.stroke-solid 
+  stroke-dashoffset: 0
+  stroke-dashArray: 300
+  stroke-width: 2px
+  transition: stroke-dashoffset 1s ease, opacity 1s ease
+
+.icon 
+  transform-origin: 50% 50%
+  transition: transform 20ms ease-out
+  transition: stroke-dashoffset 1s ease, all 1s ease
+  @include transform(translateY(10%))
+
+// Hover
+#play:hover 
+  .stroke-dotted 
+    stroke-width: 1.5px
+    opacity: 1
+  
+  .stroke-solid 
+    opacity: 0
+    stroke-dashoffset: 100
+  
+  .icon 
+    @include transform(translateY(10%))
+
+#play 
+  cursor: pointer
+
+
+.overlay 
+  width: 100%
+  height: 100vh
+  background: rgba(0,0,0,1)
+  position: fixed
+  z-index: 23333333
+  top: 0
+  opacity: 0
+  left: -100%
+  transition: opacity 1.5s
+  -webkit-transition: opacity 1.5s
+
+
+.video-container 
+  width: 95%
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  -webkit-transform: translate(-50%, -50%)
+
+.close 
+  width: 20px
+  fill: white
+  position: absolute
+  right: 0
+  top: -30px
+
+.close:hover 
+  fill: rgba(255,255,255,0.5)
+  cursor: pointer
+
+.show 
+  opacity: 1
+
+
+// features
+.features 
+  text-align: center
+  h2
+    margin-top: 170px
+    font-size: 7.2rem
+    font-family: $font-bold
+    max-width: 600px
+    line-height: 1.2em
+    display: inline-block
+    color: $turquoise
+    letter-spacing: -1.8px
+    &::after
+      content: ''
+      background: $turquoise
+      display: block
+      height: 4px
+      width: 22px
+      margin: 34px auto 60px
+
+  aside,
+  figure
+    text-align: left
+    h3
+      color: $dark
+      font-size: 2.8rem
+      letter-spacing: -0.7px
+      line-height: 2.8rem
+      font-family: $font-bold
+      margin-bottom: 1rem
+    p 
+      font-size: 1.8rem
+      letter-spacing: -0.45px
+      line-height: 2.8rem
+      margin-bottom: 3rem
+
+  aside
+    @extend %col-5
+    max-width: 46%
+  figure
+    @extend %col-6
+    @extend %offset-1
+    @include transform(translateY(-1%))
+
+
+// testimonials
+.testimonials-quotes-list
+  padding-top: 9px
+  padding-bottom: 74px
+  border-top: 1px solid $light-border
+  .quote-list 
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    max-width: 1280px
+    margin: auto
+    padding-right: 30px
+    padding-left: 30px
+    -webkit-flex-wrap: wrap
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    -webkit-box-pack: justify
+    -webkit-justify-content: space-between
+    -ms-flex-pack: justify
+    justify-content: space-between
+    .quote-item
+      margin-top: 68px
+      -webkit-flex-basis: 47%
+      -ms-flex-preferred-size: 47%
+      flex-basis: 47%
+      -webkit-flex-shrink: 0
+      -ms-flex-negative: 0
+      flex-shrink: 0
+      color: #181818
+      font-size: 18px
+      font-weight: 400
+      line-height: 145%
+      text-align: left
+      .quote
+        display: -webkit-box
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: justify
+        -webkit-justify-content: space-between
+        -ms-flex-pack: justify
+        justify-content: space-between
+        blockquote
+          padding-left: 20px
+          position: relative
+          &::before
+            top: -16px
+            content: ""
+            color: #ebebeb
+            font-size: 47px
+            width: 65px
+            height: 67px
+            position: absolute
+            background: url(images/quo.png)
+            background-size: 65px 67px
+            left: -5px
+            z-index: -1
+          p 
+            color: #212121
+            font-size: 18px
+            font-weight: 400
+            line-height: 150%
+            width: 100%
+        .person 
+          margin-top: 9px
+          -webkit-flex-basis: 110px
+          -ms-flex-preferred-size: 110px
+          flex-basis: 110px
+          -webkit-flex-shrink: 0
+          -ms-flex-negative: 0
+          flex-shrink: 0
+          color: #9e9e9e
+          font-size: 14px
+          font-weight: normal
+          line-height: 18px
+          .company
+            display: block
+            color: #181818
+            font-weight: 600
+          .name 
+            margin-top: 10px
+            display: block
+          .figcaption
+            line-height: 17px
+
+.flying-products
+  background: $dark url(images/pattern.png)
+  background-size: 50%
+  min-height: 120vh
+  text-align: center
+  position: relative
+  .bigbutton
+    display: inline-block
+    position: absolute
+    bottom: 5em
+    width: 358px
+    height: 102px
+    border-radius: 100px
+    background: rgba(black, .6)
+    line-height: 102px
+    left: 50%
+    margin-left: -179px
+    font-family: $font-bold
+    font-size: 2.4rem
+    color: white
+    border: 2px solid white
+    @include transition(all .3s)
+    &:hover
+      background: rgba(black, 1)
+
+  img
+    position: absolute
+    &.product-one
+      width: 600px
+      left: 50%
+      margin-left: -300px
+      top: 28em
+    &.product-two
+      width: 560px
+      left: 56%
+      top: 45em
+    &.product-three
+      width: 400px
+      left: 16%
+      top: 40em
+  h2
+    margin-top: 200px
+    font-size: 7.2rem
+    font-family: $font-bold
+    max-width: 10em
+    line-height: 1.2em
+    display: inline-block
+    color: white
+    letter-spacing: -1.8px
+    &::after
+      content: ''
+      background: white
+      display: block
+      height: 4px
+      width: 22px
+      margin: 34px auto 60px
+
+.map-partners
+  background: white url(images/map.jpg) no-repeat center 400px
+  background-size: 60%
+  
+  text-align: center
+  position: relative
+  z-index: -1
+  h2
+    margin-top: 200px
+    font-size: 7.2rem
+    font-family: $font-bold
+    max-width: 10em
+    line-height: 1.2em
+    display: inline-block
+    color: $dark
+    letter-spacing: -1.8px
+    &::after
+      content: ''
+      background: $dark
+      display: block
+      height: 4px
+      width: 22px
+      margin: 34px auto 60px
+
+.list-partners
+  text-align: center
+  position: relative
+  h2
+    margin-top: 200px
+    font-size: 7.2rem
+    font-family: $font-bold
+    max-width: 10em
+    line-height: 1.2em
+    display: inline-block
+    color: $dark
+    letter-spacing: -1.8px
+    &::after
+      content: ''
+      background: $dark
+      display: block
+      height: 4px
+      width: 22px
+      margin: 34px auto 60px
+  .container
+    @extend %row
+    .clogo
+      @extend %col-4
+      background: white
+      border: 1px solid $light-border
+      line-height: 383px
+      min-height: 383px
+      transform: scale(1.04)
+      @include transition(all .3s)
+      img.products 
+        position: absolute
+        opacity: 0
+        @include transition(all .3s)
+        transform: scale(0.6)
+        left: 0
+        top: -30px
+      img.logos
+        @include transition(all .3s)
+        transform: scale(0.5)
+        vertical-align: middle
+      &:hover
+        box-shadow: 0 2px 34px rgba(black, 0.08)
+        z-index: 99
+        margin-top: -15px
+        margin-left: 5px
+        transform: scale(1.06)
+        img.logos
+          transform: scale(0.2)
+          margin-bottom: -280px
+        img.products 
+          opacity: 1
+      h4
+        font-size: 3.2rem
+        line-height: 4.2rem
+        font-family: $font-bold
+        width: 200px
+        display: inline-block
+        @include transform(translatey(-30px))
+        &::after
+          content: ''
+          background: $dark
+          display: block
+          height: 4px
+          width: 22px
+          margin: 34px auto 60px
+      &.last
+        background: #F9F9F9
+      a 
+        position: absolute
+        left: 50%
+        width: 190px
+        margin-left: -95px
+        clear: both
+        height: 51px
+        background: $turquoise
+        color: white
+        font-family: $font-bold
+        display: inherit
+        line-height: 52px
+        bottom: 18%
+        border-radius: 30px
+.pt-title 
+  position: relative
+  height: 160px
+  line-height: 230px
+  text-align: center
+
+  h1 
+    font-size: 2.4rem
+    font-weight: 700
+  
+
+  @include MQ(M) 
+    line-height: 250px
+  
+
+  @include MQ(L) 
+    height: 200px
+    line-height: 300px
+
+    h1 
+      font-size: 3rem
+    
+  
+
+
+.pt-intro 
+  width: 90%
+  max-width: $M
+  text-align: center
+
+
+.pt-intro 
+  margin: 4em auto
+
+  @include MQ(M) 
+    margin: 5em auto
+  
+
+  @include MQ(L) 
+    margin: 6em auto
+  
+
+
+.pt-headline 
+  font-size: 3rem
+  line-height: 1.2
+
+  @include MQ(M) 
+    font-size: 4.4rem
+    font-weight: 300
+  
+
+  @include MQ(L) 
+    font-size: 6rem
+  
+
+
+.pt-words-wrapper 
+  display: inline-block
+  position: relative
+  text-align: center
+  margin-top: 3em
+
+  b 
+    display: inline-block
+    position: absolute
+    text-align: center
+    white-space: nowrap
+    font-family: $font-bold
+    font-size: 4.8rem
+    line-height: .8em
+    color: $turquoise
+    left: 0
+    top: 0
+
+    span
+      font-size: 1.8rem
+      color: $dark
+
+    &.is-visible 
+      position: relative
+    
+  
+
+  .no-js & b 
+    opacity: 0
+    
+    &.is-visible 
+      opacity: 1
+    
+
+  
+
+
+
+.pt-headline.rotate-2 
+
+  .pt-words-wrapper 
+    @include perspective(300px)
+  
+
+  i, em 
+    display: inline-block
+    @include backface-visibility(hidden)
+  
+
+  b 
+    opacity: 0
+  
+
+  i 
+    @include transform-style(preserve-3d)
+    @include transform(translateZ(-20px) rotateX(90deg))
+    opacity: 0
+
+    .is-visible & 
+      opacity: 1
+    
+
+    &.in 
+      @include animation(pt-rotate-2-in .4s forwards)
+    
+
+    &.out 
+      @include animation(pt-rotate-2-out .4s forwards)
+    
+  
+
+  em 
+    @include transform(translateZ(20px))
+  
+
+
+.no-csstransitions .pt-headline.rotate-2 i 
+  @include transform(rotateX(0deg))
+  opacity: 0
+
+  em 
+    @include transform(scale(1))
+  
+
+
+.no-csstransitions .pt-headline.rotate-2 .is-visible i 
+  opacity: 1
+
+
+@include keyframes(pt-rotate-2-in) 
+  0% 
+    opacity: 0
+    @include transform(translateZ(-20px) rotateX(90deg))
+  
+
+  60% 
+    opacity: 1
+    @include transform(translateZ(-20px) rotateX(-10deg))
+  
+
+  100% 
+    opacity: 1
+    @include transform(translateZ(-20px) rotateX(0deg))
+  
+
+
+@include keyframes(pt-rotate-2-out) 
+  0% 
+    opacity: 1
+    @include transform(translateZ(-20px) rotateX(0))
+  
+
+  60% 
+    opacity: 0
+    @include transform(translateZ(-20px) rotateX(-100deg))
+  
+
+  100% 
+    opacity: 0
+    @include transform(translateZ(-20px) rotateX(-90deg))
+  
+
+
+.pt-headline.clip 
+
+  span 
+    display: inline-block
+    padding: .2em 0
+  
+
+  .pt-words-wrapper 
+    overflow: hidden
+    vertical-align: top
+
+    &::after 
+      /* line */
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      width: 2px
+      height: 100%
+  b 
+    opacity: 0
+
+    &.is-visible 
+      opacity: 1
+
+
+.news 
+  margin-top: 12em
+
+
+.owl-pagination
+  position: absolute
+  z-index: 100
+  left: 0
+  right: 0
+  bottom: 65px
+  text-align: center
+  -webkit-tap-highlight-color: transparent
+  .owl-page
+    display: inline-block
+    span
+      width: 10px
+      height: 10px
+      margin: 0 3px
+      background: white
+      display: block
+      -webkit-backface-visibility: visible
+      -webkit-transition: opacity 200ms ease
+      transition: opacity 200ms ease
+      border-radius: 30px
+    &.active
+      span
+        background: $turquoise
+
+
+.owl-carousel 
+  position: relative
+  min-height: 840px
+  height: 100%
+  .text
+    position: absolute
+    top: 300px
+    left: 300px
+  h3
+    color: white
+    font-size: 4.8rem
+    line-height: 5.8rem
+    font-family: $font-bold
+    letter-spacing: -0.8px
+    margin-bottom: .5em
+  p 
+    display: block
+    color: white
+    font-size: 1.8rem
+    line-height: 2.8rem
+    font-family: $font-regular
+    letter-spacing: -0.8px
+    max-width: 500px
+
+  div:not(.owl-controls) 
+    height: 100%
+  .owl-slide 
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+  
+  div.owl--text 
+  position: absolute
+  bottom: 0
+  top: 0
+  width: 20em
+  height: 8em
+  background: rgba(255,255,255,.5)
+  
+  .owl-controls 
+    position: absolute
+    left: 0
+    right: 0
+    
+    .owl-buttons 
+      div 
+        position: absolute
+        top: 0
+        bottom: 0
+        display: inline-block
+        zoom: 1
+        margin: 0
+        width: 50px
+        height: 30px
+        line-height: 25px
+        text-align: center
+        font-size: .9em
+        border-radius: 3px
+        color: #FFF
+        background: #000
+        opacity: .6
+        text-transform: capitalize
+       
+      
+      .owl-prev 
+        left: 5px
+      
+      .owl-next 
+        right: 5px
+      
+footer
+  background: $turquoise url(images/pattern-light.png)
+  background-size: 50%
+  min-height: 900px
+  margin: -200px
+  
+
+
+
