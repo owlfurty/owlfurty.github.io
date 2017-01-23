@@ -1,0 +1,29 @@
+body{
+  background: black;
+  }
+
+.thumb{
+   cursor: pointer;
+}
+
+video{
+    float: left;
+    position: relative;
+    width: 33%;
+    overflow: hidden;
+    height: 500px;
+    opacity: .8;
+    -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+video:hover{
+    opacity: 1;
+    -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
