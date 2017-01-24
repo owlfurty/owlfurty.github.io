@@ -6,7 +6,10 @@ body{
    cursor: pointer;
 }
 
-
+section {
+    padding: 50px 250px 0;
+    box-sizing: border-box;
+}
 video{
     float: left;
     position: relative;
@@ -18,7 +21,7 @@ video{
     z-index: -99;
     padding: 5px;
     box-sizing: border-box;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 video:hover{
@@ -29,14 +32,11 @@ video:hover{
 
 h1 {
     z-index: 99999;
-    position: absolute;
-    height: 100px;
-    bottom: 0;
+    color: white;
     left: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 500%;
-    letter-spacing: -5px;
+    font-size: 300%;
     width: 100%;
     text-align: center;
 }
