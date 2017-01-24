@@ -40,3 +40,9 @@ h1 {
     text-align: center;
     position: relative;
 }
+
+.dior {
+    width: 70%;
+    margin: auto;
+    display: block;
+}
