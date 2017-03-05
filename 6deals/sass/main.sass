@@ -278,9 +278,13 @@ header
             padding-top: 180px
         .intro-lead-in
             @include serif-font
-            font-size: 22px
-            line-height: 22px
+            font-size: 18px
+            line-height: 18px
             margin-bottom: 25px
+            @media(max-width:768px)
+                font-size: 18px
+                line-height: 32px
+                text-align: center
         
         .intro-heading
             @include heading-font
@@ -290,6 +294,7 @@ header
             margin-bottom: .3em
             @media(max-width:768px)
                 font-size: 36px
+                text-align: center
         
     
 
@@ -338,6 +343,8 @@ header
         display: inline-block
         margin-right: 10px
         font-size: 14px
+        @media(max-width:768px)
+            font-size: 12px
         &:before
             margin-right: 8px
             content: ''
@@ -439,7 +446,7 @@ section
             h4
                 text-transform: none
                 margin: 0
-            
+                font-size: 18px
             p
                 font-size: 16px
                 margin: .5em 0 0
@@ -545,6 +552,8 @@ footer
         margin: 1em
     p 
         color: rgba($gray-darker, .3) 
+    @media(max-width:768px)
+        display: none
 
 #timer 
     font-size: 18px
@@ -646,7 +655,7 @@ section.group
             h2 
                 font-size: 56px
         a 
-            font-size: 22px
+            font-size: 18px
     .overlay 
         height: 100%
         width: 100%
@@ -674,7 +683,7 @@ section.context
             h2 
                 font-size: 56px
         p 
-            font-size: 22px
+            font-size: 18px
     .overlay 
         height: 100%
         width: 100%

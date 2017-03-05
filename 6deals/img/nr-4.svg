@@ -7,12 +7,10 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="6Deals" transform="translate(-389.000000, -1594.000000)">
             <g id="Group-9" transform="translate(120.000000, 142.000000)">
-                <g id="nr" transform="translate(274.000000, 1457.000000)">
-                    <g id="Group-2" transform="translate(-5.000000, -5.000000)">
+                <g id="nr" transform="translate(269.000000, 1452.000000)">
+                    <g id="Group-2">
                         <rect id="Rectangle-2" fill="#262B2F" x="0" y="0" width="55" height="55" rx="27.5"></rect>
-                        <text id="1" font-family="HaasGrotDisp-75Bold, Haas Grot Disp" font-size="30.2400007" font-weight="bold" fill="#FFFFFF">
-                            <tspan x="18.1255998" y="38.8399991">4</tspan>
-                        </text>
+                        <path d="M28.4072,38.8399991 L28.4072,34.243519 L18.7606398,34.243519 L18.7606398,29.5563189 L28.34672,17.9139186 L33.3665601,17.9139186 L33.3665601,30.3727989 L36.3603202,30.3727989 L36.3603202,34.243519 L33.3665601,34.243519 L33.3665601,38.8399991 L28.4072,38.8399991 Z M22.6011199,30.3727989 L28.4072,30.3727989 L28.4072,23.2663987 L28.34672,23.2663987 L22.6011199,30.3123189 L22.6011199,30.3727989 Z" id="1" fill="#FFFFFF"></path>
                     </g>
                 </g>
             </g>
