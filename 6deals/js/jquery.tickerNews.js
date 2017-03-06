@@ -5,7 +5,7 @@
 		var opt = $.extend(true,{
 			base : {
 				width : 3100,
-				time : 140000
+				time : 80000
 			},
 			itemWidth : "auto",
 			ticker : ".ti_news",
