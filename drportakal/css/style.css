@@ -356,8 +356,8 @@ body {
 @media (max-width:640px) {
   .kent {
     /*   position: absolute; */
-      top: 25px;
-      right: 25px;
+      top: 5px;
+      right: 5px;
       z-index: 999;
       width: 80px;
     }
