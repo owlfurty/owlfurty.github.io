@@ -1,0 +1,734 @@
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "media" 
+@import "variables"
+@import "mixins"
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+    -webkit-font-smoothing: antialiased
+    box-sizing: border-box
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+
+.form-control
+    border-color: #e3e4dd
+    &:focus
+        border-color: $gray-dark
+        box-shadow: none
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus 
+  outline: 0
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+// Global Components
+
+body
+    overflow-x: hidden
+    @include body-font
+
+
+p.text-muted
+    color: $gray-darker
+    @include heading-font
+
+    span
+        color: rgba($gray-darker,.5)
+        text-decoration: line-through
+        margin-right: 14px
+        @include body-font
+        font-weight: 200
+
+
+
+.text-primary
+    color: $theme-primary
+
+
+p
+    font-size: 14px
+    line-height: 1.75
+
+
+p.large
+    font-size: 16px
+
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active
+    outline: none
+
+
+a
+    color: $theme-primary
+
+
+a:hover,
+a:focus,
+a:active,
+a.active
+    color: darken($theme-primary, 10%)
+
+
+h1, h2, h3, h4, h5, h6
+    @include heading-font
+    font-weight: 700
+
+
+.img-centered
+    margin: 0 auto
+
+
+.bg-light-gray
+    background-color: $gray-lighter
+
+
+.bg-darkest-gray
+    background-color: $gray-darker
+
+
+// Restyled Primary Buttons
+
+.btn-primary
+    @include button-variant(white, $theme-primary, $theme-primary)
+    @include heading-font
+    font-weight: 700
+
+
+.btn-xl
+    @include button-variant(white, $theme-primary, $theme-primary)
+    @include heading-font
+    font-weight: 700
+    border-radius: 3px
+    font-size: 18px
+    padding: 20px 40px
+
+// @media only screen and (min-width : 1200px)
+.container-large
+    padding: 10px
+    width: 95%
+    margin: auto
+
+// Custom Navigation Bar
+.loaded
+    .navbar-custom
+        top: 0
+        transition: opacity 1500ms cubic-bezier(0, 1, 0.5, 1), top 1500ms cubic-bezier(0, 1, 0.5, 1)
+        opacity: 1
+
+.navbar-custom
+    background-color: transparent
+    position: absolute
+    z-index: 999
+    width: 100%
+    border-color: transparent
+    top: -100px
+    opacity: 0
+    .navbar-brand
+        margin: 0!important
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        img
+            width: 100px
+            transition: .2s ease-in-out
+        @media(min-width:768px)
+            img
+                width: 200px
+        
+    .navbar-collapse
+        border-color: fade-out(white, .02)
+    
+    .navbar-toggle
+        border-color: $theme-primary
+        @include heading-font
+        color: white
+        font-size: 12px
+        &:hover,
+        &:focus
+            background-color: $theme-primary
+        
+    
+    .nav
+        li
+            a
+                @include heading-font
+                font-weight: 400
+                letter-spacing: 1px
+                &:hover,
+                &:focus
+                    color: $theme-primary
+                    outline: none
+                
+            
+        
+    
+    .navbar-nav>.active>a
+        border-radius: 0
+        color: white
+        background-color: $theme-primary
+    
+    .navbar-nav>.active>a:hover,
+    .navbar-nav>.active>a:focus
+        color: white
+        background-color: darken($theme-primary, 10%)
+    
+.iconbuttons
+    a 
+        display: block
+        height: 30px
+        width: 30px
+        padding: 0 25px!important
+        position: relative
+        span
+            color: white
+            background: $gray-darker
+            display: inline-block
+            height: 16px
+            width: 16px
+            padding-left: 1px
+            line-height: 18px
+            border-radius: 50%
+            text-align: center
+            font-size: 9px
+            position: absolute
+    .shopping 
+        background: url(../img/shopping.svg) no-repeat center center
+    .profile 
+        background: url(../img/profile.svg) no-repeat center center   
+
+@media(min-width:768px)
+    .navbar-custom
+        background-color: transparent
+        padding: 25px 0
+        -webkit-transition: padding 0.3s
+        -moz-transition: padding 0.3s
+        transition: padding 0.3s
+        border: none
+            
+        .navbar-nav>.active>a
+            border-radius: 3px
+        
+// Navbar Change on Scroll
+
+@media(min-width:768px)
+    .navbar-custom.affix
+        // background-color: $gray-darker
+        padding: 10px 0
+        .navbar-brand
+            font-size: 1.5em
+            img
+                width: 150px
+
+
+header
+    background-image: url('../img/header-bg.jpg')
+    background-repeat: no-repeat
+    background-attachment: scroll
+    background-position: center center
+    position: relative
+    overflow: hidden
+    height: 100vh
+    @media(max-width:768px)
+        background-position: right right
+    @include background-cover
+    text-align: left
+    color: $gray-darker
+    &:after
+        content: ''
+        width: 136px
+        height: 82px
+        display: inline-block
+        background-image: url('../img/wwk.svg')
+        right: 50px
+        bottom: 100px
+        position: absolute
+        @media(max-width:768px)
+            display: none
+    .intro-text
+        padding-top: 220px
+        padding-bottom: 150px
+        @media(max-width:768px)
+            padding-top: 180px
+        .intro-lead-in
+            @include serif-font
+            font-size: 18px
+            line-height: 18px
+            margin-bottom: 25px
+            @media(max-width:768px)
+                font-size: 18px
+                line-height: 32px
+                text-align: center
+        
+        .intro-heading
+            @include heading-font
+            font-weight: 700
+            font-size: 50px
+            line-height: 50px
+            margin-bottom: .3em
+            @media(max-width:768px)
+                font-size: 36px
+                text-align: center
+        
+    
+
+
+@media(min-width:768px)
+    header
+        .intro-text
+            padding-top: 300px
+            padding-bottom: 280px
+            .intro-lead-in
+                @include body-font
+                font-weight: 200
+                font-size: 18px
+                line-height: 28px
+                margin-bottom: .2em
+            
+            .intro-heading
+                @include heading-font
+                font-size: 56px
+                line-height: 56px
+                margin-bottom: .2em
+            
+        
+.subscribe
+    .form-control
+        border-radius: 0
+        height: 65px
+        margin-top: 1em
+        @include body-font
+    .btn.btn-default
+        margin-top: 1em
+        border-radius: 0
+        height: 65px
+        width: 65px
+        border: none
+        background: $gray-darker url('../img/arrow.svg') no-repeat center center
+        transition: .2s ease-in-out
+        &:hover
+            background: $gray-darker url('../img/arrow.svg') no-repeat 26px center
+
+.features 
+    padding: 0
+    margin-top: 1.2em
+    list-style-type: none
+    li 
+        display: inline-block
+        margin-right: 10px
+        font-size: 14px
+        @media(max-width:768px)
+            font-size: 12px
+        &:before
+            margin-right: 8px
+            content: ''
+            background: url('../img/tick.svg') no-repeat center bottom
+            width: 18px
+            height: 18px
+            display: inline-block
+
+// Global Section Styles
+
+section
+    padding: 2em 0
+    h2.section-heading
+        font-size: 40px
+        margin-top: 0
+        margin-bottom: 15px
+    
+    h3.section-subheading
+        font-size: 16px
+        @include serif-font
+        text-transform: none
+        font-weight: 400
+        margin-bottom: 75px
+    
+
+
+@media(min-width:768px)
+    section
+        padding: 2em 0
+    
+
+
+// Services Section
+
+.service-heading
+    margin: 15px 0
+    text-transform: none
+
+
+// product Section
+.navbar-collapse
+    padding: 0 4px
+#product
+    .product-item
+        margin: 0 0 15px
+        right: 0
+        position: relative
+        img
+            width: 100%
+        .nr
+            position: absolute
+            left: 34px
+            top: 14px
+            width: 60px
+            z-index: 999
+        .product-link
+            display: block
+            position: relative
+            max-width: 500px
+            margin: 0 auto
+
+            .product-hover
+                background: fade-out($theme-primary, .9)
+                position: absolute
+                width: 100%
+                height: 100%
+                opacity: 0
+                transition: all ease 0.5s
+                -webkit-transition: all ease 0.5s
+                -moz-transition: all ease 0.5s
+                &:hover
+                    opacity: 1
+                
+                .product-hover-content
+                    position: absolute
+                    width: 100%
+                    height: 20px
+                    font-size: 20px
+                    text-align: center
+                    top: 50%
+                    margin-top: -12px
+                    color: white
+                    i
+                        margin-top: -12px
+                    
+                    h3,
+                    h4
+                        margin: 0
+                    
+                                
+                        
+        
+        .product-caption
+            max-width: 400px
+            margin: 0 auto
+            background-color: white
+            text-align: center
+            padding: 25px
+            h4
+                text-transform: none
+                margin: 0
+                font-size: 18px
+            p
+                font-size: 16px
+                margin: .5em 0 0
+            
+    *
+        z-index: 2
+    
+
+
+@media(min-width:767px)
+    #product
+        .product-item
+            margin: 0 0 30px
+        
+    
+
+// Highlight Color Customization
+
+::-moz-selection
+    text-shadow: none
+    background: #000
+    color: #FFFCF6
+
+
+::selection
+    text-shadow: none
+    background: #000
+    color: #FFFCF6
+
+
+img::selection
+    background: transparent
+
+
+img::-moz-selection
+    background: transparent
+
+
+body
+    webkit-tap-highlight-color: $gray-darker
+
+footer 
+    width: 100%
+    height: 460px
+    padding-top: 2em
+    right: 0
+    bottom: 0
+    left: 0
+    margin: 2px
+    z-index: 50
+    
+    ul 
+        padding: 0
+        list-style-type: none
+
+    h4 
+        font-size: 21px
+        color: #262B2F
+    
+
+    .links 
+        margin-top: 30px
+        font-size: 16px
+        a 
+            color: #262B2F
+            margin-bottom: 10px
+            &:hover 
+                color: #333
+            
+    strong
+        @include heading-font
+    
+
+    .line 
+        border-top: 1px solid #979797
+        margin-top: 60px
+        margin-bottom: 20px
+    
+
+    .copyright 
+        float: left
+        font-size: 16px
+        color: #262B2F
+        margin: 3em 0
+        &.text
+            line-height: 56px;
+            text-indent: 20px;
+            font-size: 14px
+            
+    .social 
+        float: right
+        margin-right: 90px
+        a 
+            float: left
+            margin-right: 23px
+            img 
+                width: 25px
+        @media(max-width:768px)
+            display: none
+
+.payments
+    img
+        margin: 1em
+    p 
+        color: rgba($gray-darker, .3) 
+    @media(max-width:768px)
+        display: none
+
+#timer 
+    font-size: 18px
+    margin-bottom: 2em
+    span
+        @include heading-font
+    
+.tickernews
+    width: 100%
+    height: 50px
+    line-height: 48px
+    overflow: hidden
+    position: absolute
+    bottom: 26px
+.ti_wrapper
+    width: 100%
+    position: relative
+    overflow: hidden
+
+.ti_slide
+    width: 300000px
+    position: relative
+    left: 0
+    top: 0
+
+.ti_content
+    width: 8000px
+    position: relative
+    float: left
+
+.ti_news
+    float: left
+
+.ti_news a
+    display: block
+    font-size: 14px
+    padding: 0 50px
+    text-decoration: none
+    color: rgba($gray-darker, .8)
+    strong
+        @include heading-font
+
+#services 
+    background: #F8F8F8
+    padding: 5em 0
+    margin-bottom: 2em
+    h3
+        font-size: 56px
+        line-height: .8em
+    p 
+        font-size: 18px
+
+
+.pace
+  -webkit-pointer-events: none
+  pointer-events: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  user-select: none
+
+.pace-inactive
+  display: none
+
+.pace .pace-progress
+  background: $gray-darker
+  position: fixed
+  z-index: 2000
+  top: 0
+  right: 100%
+  width: 100%
+  height: 4px
+
+
+section.group
+    position: relative
+    padding: 20vh 10px
+    width: 93.5%
+    margin: 3em auto 
+    &.fit
+        background: url('../img/bg-cta.jpg') no-repeat center center
+        background-size: cover
+    &.live
+        background: url('../img/bg-2.jpg') no-repeat center center
+        background-size: cover
+    &.device
+        background: url('../img/bg-3.jpg') no-repeat center center
+        background-size: cover
+    .group-content 
+        position: relative
+        z-index: 1
+        text-align: center
+        h2 
+            margin-top: 0
+            margin-bottom: 25px
+            color: white
+            font-size: 44px
+        
+        @media (min-width: 768px) 
+            h2 
+                font-size: 56px
+        a 
+            font-size: 18px
+    .overlay 
+        height: 100%
+        width: 100%
+        background-color: rgba(0,0,0,.5)
+        position: absolute
+        top: 0
+        left: 0
+
+section.context
+    position: relative
+    padding: 6em 10px
+    width: 93.5%
+    margin: 3em auto 
+    .context-content 
+        position: relative
+        z-index: 1
+        text-align: center
+        h2 
+            margin-top: 0
+            margin-bottom: 25px
+            color: $gray-darker
+            font-size: 48px
+        
+        @media (min-width: 768px) 
+            h2 
+                font-size: 56px
+        p 
+            font-size: 18px
+    .overlay 
+        height: 100%
+        width: 100%
+        background: #f7f7f7 url(../img/bg.png) no-repeat right center
+        background-size: 280px
+        position: absolute
+        top: 0
+        left: 0
+    @media(max-width:768px)
+            display: none
+
+#tcb-testimonial-carousel 
+    box-shadow: 0 3px 30px rgba(0,0,0,.08)
+    padding-top: 15px
+    padding-bottom: 15px
+    p 
+        @include heading-font
+        font-size: 18px
+        text-indent: .6em
+    blockquote 
+        border-left: none
+        margin: 0
+        padding: 3em 10px 2em
+        quotes: "\201C""\201D""\2018""\2019"
+        font-size: 32px
+        line-height: .1em
+        color: #a1a1a1
+        font-weight: 200
+
+    blockquote:before
+        color: #EBEDEF
+        content: open-quote
+        font-size: 6em
+        vertical-align: -0.48em
+
+    .carousel-indicators 
+        .active
+            background: $gray-darker
+        li 
+            background: #D5D5D5
+
+    @media(max-width:768px)
+            display: none
+
+
+
+
+
