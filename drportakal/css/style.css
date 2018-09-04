@@ -8,7 +8,7 @@ html {
   font-size: 14px;
   font-family: 'Heebo', sans-serif;
   color: #212121;
-  background: #FCB200;
+  background: #FFF;
 }
 
 body {
@@ -354,6 +354,13 @@ body {
 
 
 @media (max-width:640px) {
+  .kent {
+    /*   position: absolute; */
+      top: 25px;
+      right: 25px;
+      z-index: 999;
+      width: 80px;
+    }
   .buyuk {
   font-weight: bold;
     /*   text-transform: uppercase; */
