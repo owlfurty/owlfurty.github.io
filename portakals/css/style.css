@@ -172,6 +172,15 @@ body {
   text-align: center;
 }
 
+.price span {
+  opacity: .4;
+  display: block;
+  font-size: 11.5px;
+  letter-spacing: -.3px;
+  margin-top: -1.4em;
+  margin-bottom: 2em;
+  font-weight: 400;
+}
 .small {
   font-size: 1rem;
   vertical-align: middle;
@@ -354,6 +363,15 @@ body {
 
 
 @media (max-width:640px) {
+  .price span {
+    opacity: .4;
+    display: block;
+    font-size: 11.5px;
+    letter-spacing: -.3px;
+    margin-top: -1.4em;
+    margin-bottom: 2em;
+    font-weight: 400;
+  }
   .kent {
     /*   position: absolute; */
       top: 5px;
