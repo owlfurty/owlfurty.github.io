@@ -11,7 +11,16 @@
     padding: 1em calc(50% - 300px);
   }
 }
-
+.h1 {
+  font-size: 3em!important;
+  width: 100%;
+  text-align: center;
+}
+.logo {
+  width: 320px;
+  margin: 2em auto 1em;
+  display: block;
+}
 .item {
   border-bottom: 1px dotted #c5c5c5;
   -webkit-column-break-inside: avoid;
@@ -52,7 +61,8 @@ span {
 
 header {
   display: flex;
-  max-width: 100%;
+  max-width: 90%;
+  margin: auto;
   margin-bottom: 2em;
 }
 
