@@ -1,0 +1,72 @@
+.wrapper {
+  padding: 2em 1em;
+  background: #fff;
+  -webkit-columns: 100px 2;
+          columns: 100px 2;
+  -webkit-column-gap: 32px;
+          column-gap: 32px;
+}
+@media (min-width: 600px) {
+  .wrapper {
+    padding: 1em calc(50% - 300px);
+  }
+}
+
+.item {
+  border-bottom: 1px dotted #c5c5c5;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+}
+
+span {
+  font-family: "Alfa Slab One", sans-serif;
+  margin-bottom: -4px;
+  background: #fff;
+  padding: 4px;
+  color: #111;
+}
+
+.list-title {
+  font-family: "Alfa Slab One", sans-serif;
+  font-size: 30px;
+  color: #C61320;
+  margin-bottom: 32px;
+}
+
+.list {
+  margin-bottom: 32px;
+}
+
+
+.weight {
+  text-transform: lowercase;
+  font-weight: 200;
+  font-size: 12px;
+  width: 48px;
+  display: inline-block;  
+  opacity: .5;
+}
+
+header {
+  display: flex;
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+header ul {
+  display: flex;
+  max-width: 100%;
+  margin: 2.5px;
+}
+
+header li {
+  margin: 5px;
+}
+
+header li img {
+  display: flex;
+  max-width: 100%;
+}

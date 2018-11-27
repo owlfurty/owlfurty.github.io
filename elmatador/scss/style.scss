@@ -1,0 +1,36 @@
+$unit-tiny: 4px;
+$unit-large: 32px;
+$primary-color: #e67437;
+
+.wrapper {
+  padding: 2em 1em;
+  background: #fff;
+  columns: 100px 2;
+  column-gap: $unit-large;
+  @media (min-width: 600px) {
+    padding: 1em calc(50% - 300px);
+  }
+}
+
+.item {
+  border-bottom: 1px dotted #c5c5c5;
+  break-inside: avoid;
+  display: flex;
+  justify-content: space-between;
+}
+span {
+  font-family: "Teko", sans-serif;
+  margin-bottom: -$unit-tiny;
+  background: #fff;
+  padding: $unit-tiny;
+  color: #555;
+}
+.list-title {
+  font-family: "Teko", sans-serif;
+  font-size: 30px;
+  color: $primary-color;
+  margin-bottom: $unit-large;
+}
+.list {
+  margin-bottom: $unit-large;
+}
