@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Petek Plastik</title>
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="/styles.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">    
+    
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="bar">
+        <div class="pt-logo"><a href="/"><img src="/images/logo.svg" alt="Logo"></a></div>
+      </div>
+      <div class="bar">
+        <nav class="pt-main-nav-wrapper">
+          <ul class="pt-main-nav">
+            <li><a href="/urunler">ÜRÜNLER</a></li>
+            <li><a href="/uretim">ÜRETİM</a></li>
+            <li><a href="/iletisim">İLETİŞİM</a></li>
+          </ul> <!-- .pt-main-nav -->
+        </nav> <!-- .pt-main-nav-wrapper -->
+        <span class="pt-nav-trigger">Menu<span></span></span>
+      </div>
+    </div>
+  </header>
+  
+  <main class="pt-main-content">
+    
+    <canvas id="map"></canvas>
+    <div class="hero">
+      <div class="title">
+        <h1 class="animate-reveal animate-headline">Hayatın her alanında inovatif ambalaj disiplini.</h1>
+        <a class="animate-reveal animate-play playbutton play" href="#">
+        <svg version="1.1" id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100px" width="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path class="stroke-solid" fill="none" stroke="#24A597"  d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7 C97.3,23.7,75.7,2.3,49.9,2.5"/>
+          <path class="stroke-dotted" fill="none" stroke="#34363E"  d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
+            C97.3,23.7,75.7,2.3,49.9,2.5"/>
+          <polygon class="icon" id="Triangle" fill="#24A597" points="43 62 43 35 62 48.5"></polygon>
+        </svg></a>
+      </div>
+    </div>
+    
+    <section class="features" id="basic-waypoint">
+      <h2>HER HAMLEMİZ İNSAN İÇİN.</h2>
+      <div class="container">
+        <aside>
+          <ul>
+            <li>
+              <h3>Çevre dostu üretim</h3>
+              <p>Daha yaşanabilir ve sürdürülebilir bir dünya için doğaya karşı sorumluluklarını olduğunun bilincinde bir üretim anlayışı.</p>
+            </li>
+            <li>
+              <h3>Teknolojik altyapı</h3>
+              <p>Sürekli yenilenen makine parkurumuz ve otomasyon sistemlerini inovatif olarak geliştirerek ve devamlı güncelleyen üretim teknolojisi.</p>
+            </li>
+            <li>
+              <h3>Ürünlere özel üretim</h3>
+              <p>Gıda, kozmetik, ilaç ve tarım sektörünün ambalajları başta olmak üzere her sektörün ihtiyacı olan ürünleri “amaca en uygun“ üreteren bir kurum.</p>
+            </li>
+            <li>
+              <h3>İnsan için hijyen</h3>
+              <p>Hammadde temininden ürünlerin teslimine kadar olan süreçte insan sağlığını en önemli prensibi kabul eden temiz bir kuruluş.</p>
+            </li>
+          </ul>
+        </aside>
+        <figure>
+          <img src="/images/place.png" width="834" alt="">
+        </figure>
+      </div>
+    </section>
+   
+    <section class="testimonials-quotes-list">
+      <ul class="quote-list">
+        <li class="quote-item">
+          <figure class="quote">
+            <figure class="person">
+              <img width="70" height="70" src="/images/huseyin.jpg">
+              <figcaption><span class="name">Hüseyin Çetin</span><strong class="company">Layer</strong></figcaption>
+            </figure>
+            <blockquote class="icon-20-quotation-mark">
+              <p>Gıda, kozmetik, ilaç ve tarım sektörünün ambalajları başta olmak üzere her sektörün ihtiyacı olan ürünleri “amaca en uygun“ üreteren bir kurum.</p>
+            </blockquote>
+          </figure>
+        </li>
+        <li class="quote-item">
+          <figure class="quote">
+            <figure class="person">
+              <img width="70" height="70" src="/images/maria.jpg">
+              <figcaption><span class="name">Maria Costa</span><strong class="company">Fidelio</strong></figcaption>
+            </figure>
+            <blockquote class="icon-20-quotation-mark">
+              <p>Gıda, kozmetik, ilaç ve tarım sektörünün ambalajları başta olmak üzere her sektörün ihtiyacı olan ürünleri “amaca en uygun“ üreteren bir kurum.</p>
+            </blockquote>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section class="flying-products">
+      <h2 class="animate-title product-title">PLASTİĞE YÜZLERCE ŞEKİL VERDİK.</h2>
+      <img class="product-one" src="/images/product1.png" alt="" data-parallax='{"y": -280}'/>
+      <img class="product-two" src="/images/product2.png" alt="" data-parallax='{"y": -120}'/>
+      <img class="product-three" src="/images/product3.png" alt="" data-parallax='{"y": -180}'/>
+      <a href="/urunler" class="bigbutton">AMBALAJLARI GÖR</a>
+    </section>
+    
+    <section class="map-partners">
+      <h2 class="animate-title map-title">PLASTİK AMBALAJ İHRACAT LİDERİ</h2>
+      <section class="pt-intro">
+        <h1 class="pt-headline clip is-full-width">
+          <span class="pt-words-wrapper">
+            <b class="is-visible">AZERBAYCAN <br><span>Bakü</span></b>
+            <b>RUSYA <br><span>Moskova</span></b>
+            <b>MISIR <br><span>Kahire</span></b>
+            <b>ARNAVUTLUK <br><span>Tirana</span></b>
+            <b>GÜRCİSTAN <br><span>Tiflis</span></b>
+            <b>KAZAKİSTAN <br><span>Astana</span></b>
+            <b>HOLLANDA <br><span>Amsterdam</span></b>
+            <b>ALMANYA <br><span>Berlin</span></b>
+          </span>
+        </h1>
+      </section>
+    </section>
+
+    <section class="news">
+      <div id="owll" class="owl-carousel">
+        <div class="owl-slide" style="background-image: url(/images/news1.jpg)">
+          <div class="owl--text">
+            <div class="text">
+              <h3>MUSIAD FUARINA <br>REKOR KATILIM!</h3>
+              <p class="summary">15. MÜSİAD Uluslararası Fuarı, 18. IBF Kongresi ve High Tech Port Yüksek Teknoloji Fuarı, 26-30 Kasım 2014 tarihleri arasında T.C. Cumhurbaşkanı Sayın Recep Tayyip Erdoğan ve T.C. Başbakanı Sayın Ahmet Davutoğlu’nun teşrifleri ile İstanbul CNR Expo Fuar Merkezi’nde gerçekleştirildi.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="owl-slide" style="background-image: url(/images/news1.jpg)">
+          <div class="owl--text">
+            <div class="text">
+              <h3>MUSIAD FUARINA <br>REKOR KATILIM!</h3>
+              <p class="summary">15. MÜSİAD Uluslararası Fuarı, 18. IBF Kongresi ve High Tech Port Yüksek Teknoloji Fuarı, 26-30 Kasım 2014 tarihleri arasında T.C. Cumhurbaşkanı Sayın Recep Tayyip Erdoğan ve T.C. Başbakanı Sayın Ahmet Davutoğlu’nun teşrifleri ile İstanbul CNR Expo Fuar Merkezi’nde gerçekleştirildi.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="owl-slide" style="background-image: url(/images/news1.jpg)">
+          <div class="owl--text">
+            <div class="text">
+              <h3>MUSIAD FUARINA <br>REKOR KATILIM!</h3>
+              <p class="summary">15. MÜSİAD Uluslararası Fuarı, 18. IBF Kongresi ve High Tech Port Yüksek Teknoloji Fuarı, 26-30 Kasım 2014 tarihleri arasında T.C. Cumhurbaşkanı Sayın Recep Tayyip Erdoğan ve T.C. Başbakanı Sayın Ahmet Davutoğlu’nun teşrifleri ile İstanbul CNR Expo Fuar Merkezi’nde gerçekleştirildi.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="list-partners">
+      <h2 class="animate-title list-title">BİZ ÜRETTİK</h2>
+      <div class="container">
+        
+          <div class="clogo">
+            <img class="products" src="/images/product-1.png" alt="">
+            <img class="logos" src="/images/partner-1.png" alt="">
+          </div>
+          <div class="clogo">
+            <img class="products" src="/images/product-1.png" alt="">
+            <img class="logos" src="/images/partner-2.png" alt="">
+          </div>
+          <div class="clogo">
+            <img class="products" src="/images/product-1.png" alt="">
+            <img class="logos" src="/images/partner-3.png" alt="">
+          </div>
+          <div class="clogo">
+            <img class="products" src="/images/product-1.png" alt="">
+            <img class="logos" src="/images/partner-4.png" alt="">
+          </div>
+          <div class="clogo">
+            <img class="products" src="/images/product-1.png" alt="">
+            <img class="logos" src="/images/partner-5.png" alt="">
+          </div>
+          <div class="clogo">
+            <img class="products" src="/images/product-1.png" alt="">
+            <img class="logos" src="/images/partner-6.png" alt="">
+          </div>
+          <div class="clogo">
+            <img class="products" src="/images/product-1.png" alt="">
+            <img class="logos" src="/images/partner-7.png" alt="">
+          </div>
+          <div class="clogo">
+            <img class="products" src="/images/product-1.png" alt="">
+            <img class="logos" src="/images/partner-8.png" alt="">
+          </div>
+          <div class="clogo last">
+            <h4>VE DAHA YÜZLERCESİ</h4>
+            <a href="#">TÜMÜNÜ GÖR</a>
+          </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <nav>
+        <div class="container">
+          <div class="bar">
+            <img src="/images/petektwodi.svg" alt="">
+          </div>
+          <div class="bar">
+            <h5>HOME</h5>
+            <ul>
+              <li><a href="/kalite">Kalite Sertifikaları</a></li>
+              <li><a href="/kullanim">Kullanim Şartları</a></li>
+              <li><a href="/sss">Sıkça Sorulanlar</a></li>
+              <li><a href="/referans">Referanslar</a></li>
+              <li><a href="/ik">İnsan Kaynakları</a></li>
+            </ul>
+          </div>
+          <div class="bar">
+            <h5>ÜRÜNLER</h5>
+            <ul>
+              <li><a href="/kozmetik">Kozmetik Grubu</a></li>
+              <li><a href="/gida">Gıda Grubu</a></li>
+              <li><a href="/kimyasal">Kimyasal Ürün Ambalajları</a></li>
+              <li><a href="/madeni-yag">Madeni Yağ Ambalajları</a></li>
+              <li><a href="/uretim">Üretim</a></li>
+            </ul>
+          </div>
+          <div class="bar">
+            <h5>SOSYAL</h5>
+            <ul>
+              <li><a class="sc-fb" href="https://www.facebook.com/petekpls" target="_blank">Facebook</a></li>
+              <li><a class="sc-tw" href="https://www.twitter.com/petekpls" target="_blank">Twitter</a></li>
+              <li><a class="sc-in" href="https://www.instagram.com/petekpls" target="_blank">İnstagram</a></li>
+            </ul>
+          </div>
+          <div class="bar-last">
+            <h5>İLETİŞİM</h5>
+            <p>Adres: Konya 3. Organize Sanayi<br> Bölgesi İhsandede Caddesi No: 16 <br>Selçuklu / Konya / Türkiye<br>
+                <br>Telefon: +90 332 239 06 42 (pbx)
+                <br>Faks: +90 332 239 07 42
+                <br>E-Mail: bilgi@petekplastik.com</p>
+          </div>
+        </div>
+      </nav>
+      <div class="rotate"><strong>Layer</strong> Branding</div>
+    </footer>
+  </main>
+  <div class="overlay">
+    <div class="video-container">
+      <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="39.2 22.3 25 24.5"><path d="M39.5,46.4c0.2,0.2,0.6,0.4,0.9,0.4c0.3,0,0.6-0.1,0.9-0.4l10.3-10.3L62,46.4c0.2,0.2,0.6,0.4,0.9,0.4c0.3,0,0.6-0.1,0.9-0.4c0.5-0.5,0.5-1.3,0-1.8L53.5,34.3l9.8-9.8c0.5-0.5,0.5-1.3,0-1.8c-0.5-0.5-1.3-0.5-1.8,0l-9.8,9.8l-9.8-9.8c-0.5-0.5-1.3-0.5-1.8,0c-0.5,0.5-0.5,1.3,0,1.8l9.8,9.8L39.5,44.6C39,45.1,39,45.9,39.5,46.4z"/></svg>
+      <iframe id="video" src="https://player.vimeo.com/video/74478030?api=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/waypoints/1.1.6/waypoints.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js'></script>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/canvas.js"></script>
+  <script src="/js/video.js"></script>
+  <script src="/js/trackwp.js"></script>
+  <script src="/js/headline.js"></script>
+  <script src="/js/parallax.js"></script>
+
+  <script>
+    $(document).ready(function() {
+ 
+    $("#owll").owlCarousel({
+          // navigation : fa, 
+          slideSpeed : 300,
+          paginationSpeed : 400,
+          singleItem: true,
+          pagination: true,
+          rewindSpeed: 500
+      });
+   
+  });
+  </script>
+    
+</body>
+</html>
